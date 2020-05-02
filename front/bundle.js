@@ -120,7 +120,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 function stopTimer(){
     /*clearInterval();
     */
-    window.location.replace("https://www.google.ca");
+    window.location.replace("homePage.html");
     alert("Time's up!");
 }
 
