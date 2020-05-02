@@ -2,10 +2,10 @@
 let Peer = require('simple-peer')
 let socket = io()
 const video = document.querySelector('video')
-const filter = document.querySelector('#filter')
-const checkboxTheme = document.querySelector('#theme')
+// const filter = document.querySelector('#filter')
+// const checkboxTheme = document.querySelector('#theme')
 let client = {}
-let currentFilter
+// let currentFilter
 //get stream
 navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .then(stream => {
@@ -13,12 +13,12 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         video.srcObject = stream
         video.play()
 
-        filter.addEventListener('change', (event) => {
-            currentFilter = event.target.value
-            video.style.filter = currentFilter
-            SendFilter(currentFilter)
-            event.preventDefault
-        })
+        // filter.addEventListener('change', (event) => {
+        //     currentFilter = event.target.value
+        //     video.style.filter = currentFilter
+        //     SendFilter(currentFilter)
+        //     event.preventDefault
+        // })
 
         //used to initialize a peer
         function InitPeer(type) {
@@ -77,7 +77,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
             document.querySelector('#peerDiv').appendChild(video)
             video.play()
             //wait for 1 sec
-            setTimeout(() => SendFilter(currentFilter), 1000)
+            // setTimeout(() => SendFilter(currentFilter), 1000)
 
             video.addEventListener('click', () => {
                 if (video.volume != 0)
@@ -92,11 +92,11 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
             document.write('Session Active. Please come back later')
         }
 
-        function SendFilter(filter) {
-            if (client.peer) {
-                client.peer.send(filter)
-            }
-        }
+        // function SendFilter(filter) {
+        //     if (client.peer) {
+        //         client.peer.send(filter)
+        //     }
+        // }
 
         function RemovePeer() {
             document.getElementById("peerVideo").remove();
@@ -115,29 +115,29 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     })
     .catch(err => document.write(err))
 
-checkboxTheme.addEventListener('click', () => {
-    if (checkboxTheme.checked == true) {
-        document.body.style.backgroundColor = '#212529'
-        if (document.querySelector('#muteText')) {
-            document.querySelector('#muteText').style.color = "#fff"
-        }
+// checkboxTheme.addEventListener('click', () => {
+//     if (checkboxTheme.checked == true) {
+//         document.body.style.backgroundColor = '#212529'
+//         if (document.querySelector('#muteText')) {
+//             document.querySelector('#muteText').style.color = "#fff"
+//         }
 
-    }
-    else {
-        document.body.style.backgroundColor = '#fff'
-        if (document.querySelector('#muteText')) {
-            document.querySelector('#muteText').style.color = "#212529"
-        }
-    }
-}
-)
+//     }
+//     else {
+//         document.body.style.backgroundColor = '#fff'
+//         if (document.querySelector('#muteText')) {
+//             document.querySelector('#muteText').style.color = "#212529"
+//         }
+//     }
+// }
+// )
 
-function CreateDiv() {
-    let div = document.createElement('div')
-    div.setAttribute('class', "centered")
-    div.id = "muteText"
-    div.innerHTML = "Click to Mute/Unmute"
-    document.querySelector('#peerDiv').appendChild(div)
-    if (checkboxTheme.checked == true)
-        document.querySelector('#muteText').style.color = "#fff"
-}
+// function CreateDiv() {
+//     let div = document.createElement('div')
+//     div.setAttribute('class', "centered")
+//     div.id = "muteText"
+//     div.innerHTML = "Click to Mute/Unmute"
+//     document.querySelector('#peerDiv').appendChild(div)
+//     if (checkboxTheme.checked == true)
+//         document.querySelector('#muteText').style.color = "#fff"
+// }
