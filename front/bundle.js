@@ -116,6 +116,33 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     })
     .catch(err => document.write(err))
 
+
+    //timer function
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+    
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+            display.textContent = minutes + ":" + seconds;
+    
+            if (--timer < 0) {
+               // timer = duration;
+               alert("Time's up!");
+               window.location.replace("https://www.google.ca");
+            }
+        }, 1000);
+    }
+    
+    window.onload = function () {
+        var twoMinutes = 60 * 0.1;
+        var display = document.querySelector('#time');
+        startTimer(twoMinutes, display);
+    }
+
 // checkboxTheme.addEventListener('click', () => {
 //     if (checkboxTheme.checked == true) {
 //         document.body.style.backgroundColor = '#212529'
