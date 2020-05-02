@@ -117,6 +117,13 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     .catch(err => document.write(err))
 
 
+function stopTimer(){
+    /*clearInterval();
+    */
+    window.location.replace("https://www.google.ca");
+    alert("Time's up!");
+}
+
     //timer function
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
@@ -131,8 +138,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
     
             if (--timer < 0) {
                // timer = duration;
-               alert("Time's up!");
-               window.location.replace("https://www.google.ca");
+               stopTimer();
             }
         }, 1000);
     }
