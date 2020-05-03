@@ -69,7 +69,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         }
 
         function CreateVideo(stream) {
-            CreateDiv()
+          //  CreateDiv()
 
             let video = document.createElement('video')
             video.id = 'peerVideo'
@@ -101,7 +101,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
         function RemovePeer() {
             document.getElementById("peerVideo").remove();
-            document.getElementById("muteText").remove();
+           // document.getElementById("muteText").remove();
             if (client.peer) {
                 client.peer.destroy()
             }

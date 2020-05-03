@@ -68,7 +68,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         }
 
         function CreateVideo(stream) {
-            CreateDiv()
+           // CreateDiv()
 
             let video = document.createElement('video')
             video.id = 'peerVideo'
