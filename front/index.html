@@ -33,7 +33,8 @@
                 </div>
             </div>
         </div> -->
-        <div id="timer">Video chat closes in <strong><span id="time">02:00</span></strong> minutes!</div>
+        <div id="timer">Video chat closes in <strong><span id="time">02:00</span></strong>!</div>
+          <p id="conversation-starter" class="centered"><strong>Say hello!</strong></p>
         <div class="row h-75 w-100">
             <div id="me" class="col-12 col-sm-6 d-flex justify-content-center">
                 <div class="embed-responsive embed-responsive-16by9">
@@ -60,12 +61,24 @@
         8: "Is there something you've dreamed of doing for a long time? Why haven't you done it?",
         9: "How are you? What's on your mind?"
       };
-      document.getElementById("conversation-starter").innerHTML = starters[Math.floor(Math.random() * 10)];
+      x = document.getElementById("conversation-starter");
+      if (x.style.display == "block") {
+        x.innerHTML = starters[Math.floor(Math.random() * 10)];
+      }
+    }
+    function hideClick() {
+      var x = document.getElementById("conversation-starter");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        x.style.backgroundColor = rgba(0, 0, 0, 0.5);
+      } else {
+        x.style.display = "none";
+      }
     }
     </script>
-    <div class="text-center">
-      <p id="conversation-starter"></p>
-      <button type="button" class="btn btn-light" onclick="convoClick()">Conversation Prompt!</button>
+    <div class="convo text-center">
+      <button type="button" class="btn btn-light" onclick="convoClick()">New Conversation Prompt!</button>
+      <button type="button" class="btn btn-light" onclick="hideClick()">Toggle Conversation Prompt</button>
     </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="bundle.js"></script>

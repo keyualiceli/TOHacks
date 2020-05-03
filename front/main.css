@@ -1,32 +1,43 @@
 video {
-<<<<<<< HEAD
     transform: rotateY(180deg);
-=======
-    transform: rotateY(180deg); 
     position: fixed;
     width: 38%;
 }
 
-.container-fluid{
+/* .container-fluid {
     margin-bottom: 20px;
->>>>>>> 4e3f5141b4225b1c573e75d6e91189d9fd969e70
-}
+} */
 
 .select {
     height: 30px;
 }
 
 .h-90 {
-    height: 90% !important; 
+    height: 90% !important;
 }
 
 .h-10 {
     height: 10% !important;
 }
 
-
-.btn {
+.convo {
   position: relative;
+  padding: 10px;
+  z-index: 99;
+}
+
+#conversation-starter {
+  text-align: center;
+  color: white;
+  font-size: 120%;
+  font-style: oblique;
+  position: fixed;
+  display: block;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  margin: auto;
+  text-align: center;
 }
 
 #timer {
