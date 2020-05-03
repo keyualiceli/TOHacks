@@ -134,7 +134,11 @@ function stopTimer(){
             seconds = seconds < 10 ? "0" + seconds : seconds;
 
             display.textContent = minutes + ":" + seconds;
+            var x = document.getElementById("timer");
 
+            if (--timer < 5) {
+              x.style.color = "red";
+            }
             if (--timer < 0) {
                // timer = duration;
                stopTimer();
