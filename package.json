@@ -1,6 +1,8 @@
 {
   "name": "tohacks",
   "version": "1.0.0",
+  "homepage": "https://kwikkonnect.online",
+  "private": true,
   "description": "Video Chat between 2 people using simple-peer",
   "main": "main.js",
   "scripts": {
