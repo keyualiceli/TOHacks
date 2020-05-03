@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link href="main.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon_io/favicon-32x32.png">
 </head>
 
 <body>
@@ -45,7 +46,27 @@
             </div>
         </div>
     </div>
-
+    <script>
+    function convoClick() {
+      var starters = {
+        0: "What would a perfect day look like to you?",
+        1: "What's your favourite colour and why?",
+        2: "Given the choice of anyone in the world, whom would you want as a dinner guest?",
+        3: "Before making a telephone call, do you ever rehearse what you're going to say? Why?",
+        4: "Would you like to be famous? In what way?",
+        5: "Name three things the two of you seem to have in common.",
+        6: "If a crystal ball could tell you the truth about yourself, your life, the future, or anything else, what would you want to know?",
+        7: "If you could wake up tomorrow having gained any one quality or ability, what would it be?",
+        8: "Is there something you've dreamed of doing for a long time? Why haven't you done it?",
+        9: "How are you? What's on your mind?"
+      };
+      document.getElementById("conversation-starter").innerHTML = starters[Math.floor(Math.random() * 10)];
+    }
+    </script>
+    <div class="text-center">
+      <p id="conversation-starter"></p>
+      <button type="button" class="btn btn-light" onclick="convoClick()">Conversation Prompt!</button>
+    </div>
     <script src="/socket.io/socket.io.js"></script>
     <script src="bundle.js"></script>
 </body>

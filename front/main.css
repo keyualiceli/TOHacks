@@ -1,5 +1,5 @@
 video {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 .select {
@@ -14,11 +14,10 @@ video {
     height: 10% !important;
 }
 
-#peerVideo:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
 
+.btn {
+  position: relative;
+}
 
 #timer {
     line-height: 30px;

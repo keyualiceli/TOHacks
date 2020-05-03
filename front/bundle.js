@@ -69,7 +69,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
         }
 
         function CreateVideo(stream) {
-          //  CreateDiv()
+           // CreateDiv()
 
             let video = document.createElement('video')
             video.id = 'peerVideo'
@@ -101,7 +101,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: true })
 
         function RemovePeer() {
             document.getElementById("peerVideo").remove();
-           // document.getElementById("muteText").remove();
+            document.getElementById("muteText").remove();
             if (client.peer) {
                 client.peer.destroy()
             }
@@ -130,19 +130,19 @@ function stopTimer(){
         setInterval(function () {
             minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
-    
+
             minutes = minutes < 10 ? "0" + minutes : minutes;
             seconds = seconds < 10 ? "0" + seconds : seconds;
-    
+
             display.textContent = minutes + ":" + seconds;
-    
+
             if (--timer < 0) {
                // timer = duration;
                stopTimer();
             }
         }, 1000);
     }
-    
+
     window.onload = function () {
         var twoMinutes = 60 * 2;
         var display = document.querySelector('#time');
@@ -175,6 +175,7 @@ function stopTimer(){
 //     if (checkboxTheme.checked == true)
 //         document.querySelector('#muteText').style.color = "#fff"
 // }
+
 },{"simple-peer":28}],2:[function(require,module,exports){
 'use strict'
 

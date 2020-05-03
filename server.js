@@ -5,6 +5,9 @@ const io = require('socket.io')(http)
 const port = process.env.PORT || 3000
 
 app.use(express.static(__dirname + "/front"))
+app.get('*', (req, res) => {
+  res.redirect('/')
+})
 let clients = 0
 
 io.on('connection', function (socket) {
