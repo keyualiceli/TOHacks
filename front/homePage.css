@@ -1,0 +1,28 @@
+body{
+    background-color: #ff67ae;
+    background-image: linear-gradient(to bottom right, #a9c0ff, #ffdc90);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container{
+  border: 5px solid white;
+  border-radius: 6px;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  width: 50%;
+  height: 30%;
+  background-color: #ff6eff;
+  background-image: linear-gradient(to bottom left, #ffc58f, #d7affc);
+  color: #ffffff;
+  text-align: center;
+  background-size: 100%;
+  font-size: 300%;
+  font-style: oblique;
+}
