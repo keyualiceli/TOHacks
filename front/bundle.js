@@ -144,7 +144,7 @@ function stopTimer(){
     }
     
     window.onload = function () {
-        var twoMinutes = 60 * 0.1;
+        var twoMinutes = 60 * 2;
         var display = document.querySelector('#time');
         startTimer(twoMinutes, display);
     }
