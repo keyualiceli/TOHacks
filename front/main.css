@@ -1,5 +1,15 @@
 video {
+<<<<<<< HEAD
     transform: rotateY(180deg);
+=======
+    transform: rotateY(180deg); 
+    position: fixed;
+    width: 38%;
+}
+
+.container-fluid{
+    margin-bottom: 20px;
+>>>>>>> 4e3f5141b4225b1c573e75d6e91189d9fd969e70
 }
 
 .select {
@@ -7,7 +17,7 @@ video {
 }
 
 .h-90 {
-    height: 90% !important;
+    height: 90% !important; 
 }
 
 .h-10 {
@@ -20,13 +30,12 @@ video {
 }
 
 #timer {
-    line-height: 30px;
-  height: 70px;
+  height: 50px;
   border: 5px solid white;
   border-radius: 6px;
   margin: auto;
   margin-top: 30px;
-  padding: 10px;
+  padding: 0px;
   text-align: center;
   width: 50%;
   background-color: #fc90fc;
@@ -47,6 +56,11 @@ video {
 }
 
 body{
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
     margin: 3%;
     border: 5px solid rgb(255, 255, 255);
     border-radius: 10px;
