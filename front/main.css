@@ -1,5 +1,7 @@
 video {
     transform: rotateY(180deg); 
+    position: fixed;
+    width: 38%;
 }
 
 .container-fluid{
@@ -22,9 +24,7 @@ video {
     opacity: 0.6;
     cursor: pointer;
 }
- .peerDiv, .me{
-     padding-bottom: 20px;
- }
+
 
 #timer {
   height: 50px;
